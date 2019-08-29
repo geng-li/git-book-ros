@@ -1,0 +1,589 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第二节 ROS Topics · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ros-services.html" />
+    
+    
+    <link rel="prev" href="ros-nodes.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    第一章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/install.html">
+            
+                <a href="../chapter1/install.html">
+            
+                    
+                    第一节 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/file-system.html">
+            
+                <a href="../chapter1/file-system.html">
+            
+                    
+                    第二节 常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/create-a-package.html">
+            
+                <a href="../chapter1/create-a-package.html">
+            
+                    
+                    第三节 创建package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/package_xml-cmake.html">
+            
+                <a href="../chapter1/package_xml-cmake.html">
+            
+                    
+                    第四节 package.xml和CMakeLists.txt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter1/build-ros-package.html">
+            
+                <a href="../chapter1/build-ros-package.html">
+            
+                    
+                    第五节 编译ROS Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="ros-nodes.html">
+            
+                <a href="ros-nodes.html">
+            
+                    
+                    第一节 ROS Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="ros-topics.html">
+            
+                <a href="ros-topics.html">
+            
+                    
+                    第二节 ROS Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="ros-services.html">
+            
+                <a href="ros-services.html">
+            
+                    
+                    第三节 ROS Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="ros-parameters.html">
+            
+                <a href="ros-parameters.html">
+            
+                    
+                    第四节 ROS Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="roslaunch.html">
+            
+                <a href="roslaunch.html">
+            
+                    
+                    第五节 ROS roslaunch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="rosmsg.html">
+            
+                <a href="rosmsg.html">
+            
+                    
+                    第六节 ROS rosmsg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="rossrv.html">
+            
+                <a href="rossrv.html">
+            
+                    
+                    第七节 ROS rossrv
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    第三章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/cpp-topic.html">
+            
+                <a href="../chapter3/cpp-topic.html">
+            
+                    
+                    第一节 C++实现Topics通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/cpp-exec-topic.html">
+            
+                <a href="../chapter3/cpp-exec-topic.html">
+            
+                    
+                    第二节 运行Topics通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/cpp-service.html">
+            
+                <a href="../chapter3/cpp-service.html">
+            
+                    
+                    第三节 C++实现并运行Services通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/python-topic.html">
+            
+                <a href="../chapter3/python-topic.html">
+            
+                    
+                    第四节 Python实现Topics通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/python-service.html">
+            
+                <a href="../chapter3/python-service.html">
+            
+                    
+                    第五节 Python实现Services通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    第四章
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第二节 ROS Topics</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x4E8C;&#x8282;-ros-topics">&#x7B2C;&#x4E8C;&#x8282; ROS Topics</h1>
+<p>&#x4E0D;&#x79EF;&#x8DEC;&#x6B65;&#xFF0C;&#x65E0;&#x4EE5;&#x81F3;&#x5343;&#x91CC;&#x3002;&#x5343;&#x91CC;&#x4E4B;&#x884C;&#xFF0C;&#x59CB;&#x4E8E;&#x8DB3;&#x4E0B;&#x3002;</p>
+<p>&#x4ECA;&#x5929;&#x4ECB;&#x7ECD;ROS Topics&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5982;&#x679C;&#x8FD0;&#x884C;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x5F53;&#x521D;&#x6CA1;&#x6709;&#x5B89;&#x88C5;&#x5B8C;&#x6574;&#x7248;&#x7684;ROS&#x3002;&#x672C;&#x8282;&#x5185;&#x5BB9;&#x89C1;&#x5B98;&#x7F51;<a href="http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics" target="_blank">&#x6B64;&#x5904;</a>&#x3002;</p>
+<h3 id="1-&#x542F;&#x52A8;">1. &#x542F;&#x52A8;</h3>
+<p>&#x4E0A;&#x4E00;&#x8282;&#x6211;&#x4EEC;&#x8BA9;&#x6D77;&#x9F9F;&#x51FA;&#x73B0;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x8BA9;&#x5B83;&#x52A8;&#x4E00;&#x52A8;&#x3002;&#x4F9D;&#x6B21;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x6BCF;&#x6B21;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#xFF1A;</p>
+<pre><code class="lang-bash">roscore
+rosrun turtlesim turtlesim_node
+rosrun turtlesim turtle_teleop_key
+</code></pre>
+<p>&#x8F93;&#x5B8C;&#x7B2C;3&#x6761;&#x65F6;&#x9F20;&#x6807;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x952E;&#x76D8;&#x4E0A;&#x7684;&#x4E0A;&#x4E0B;&#x5DE6;&#x53F3;&#x952E;&#x63A7;&#x5236;&#x6D77;&#x9F9F;&#x8FD0;&#x52A8;&#x4E86;&#xFF08;&#x5982;&#x679C;&#x6CA1;&#x53CD;&#x5E94;&#xFF0C;&#x4FDD;&#x8BC1;&#x9F20;&#x6807;&#x5728;&#x63A7;&#x5236;&#x7EC8;&#x7AEF;&#xFF0C;&#x5355;&#x51FB;&#x4E00;&#x4E0B;&#xFF09;&#x3002;</p>
+<p>&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../images/ros_turtle_key_ctl.png" alt=""></p>
+<p>&#x4E0D;&#x8981;&#x5173;&#x95ED;&#x4E0A;&#x9762;&#x7684;&#x7EC8;&#x7AEF;&#xFF0C;&#x4E0B;&#x9762;&#x8981;&#x7528;&#x3002;</p>
+<h3 id="2-&#x4F7F;&#x7528;-rqtgraph">2. &#x4F7F;&#x7528; rqt_graph</h3>
+<p>&#x524D;&#x9762;&#x6211;&#x4EEC;&#x628A;Nodes&#x6BD4;&#x4F5C;&#x6DD8;&#x5B9D;&#x4E0A;&#x4EA4;&#x6613;&#x4FDD;&#x6E29;&#x676F;&#x7684;&#x987E;&#x5BA2;&#x548C;&#x5546;&#x5BB6;&#xFF0C;Topics&#x5C31;&#x662F;&#x63CF;&#x8FF0;&#x4E86;&#x4FDD;&#x6E29;&#x676F;&#x7684;&#x4E70;&#x5356;&#x53CC;&#x65B9;&#x7684;&#x4FE1;&#x606F;&#x53CA;&#x4EA4;&#x6613;&#x7684;&#x5546;&#x54C1;&#xFF0C;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x4E0D;&#x662F;&#x5B9E;&#x4F53;&#x3002;&#x4FDD;&#x6E29;&#x676F;&#xFF08;message&#xFF09;&#x624D;&#x662F;&#x5B9E;&#x4F53;&#x3002;&#x987E;&#x5BA2;&#x4E70;&#x4FDD;&#x6E29;&#x676F;&#xFF0C;&#x81EA;&#x7136;&#x53EA;&#x63A5;&#x53D7;&#x4FDD;&#x6E29;&#x676F;&#xFF0C;&#x56E0;&#x6B64;&#x987E;&#x5BA2;&#x63A5;&#x53D7;&#x4FDD;&#x6E29;&#x676F;&#x65F6;&#x80AF;&#x5B9A;&#x4F1A;&#x68C0;&#x67E5;&#x662F;&#x4E0D;&#x662F;Topic&#x91CC;&#x9762;&#x6307;&#x5B9A;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x4E0D;&#x662F;&#x5219;&#x62D2;&#x6536;&#x3002;&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x5730;&#x53EF;&#x89C6;&#x5316;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x7528;ROS&#x7684;&#x4E00;&#x4E2A;&#x53EB; rqt_graph &#x7684;&#x5DE5;&#x5177;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x518D;&#x65B0;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#xFF0C;&#x8F93;&#x5165; </p>
+<pre><code class="lang-bash">rosrun rqt_graph rqt_graph
+</code></pre>
+<p>&#x8FD0;&#x884C; rqt_graph package&#x91CC;&#x9762; rqt_graph &#x8282;&#x70B9;&#xFF0C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="../images/ros_turtle_rqt.png" alt=""></p>
+<p>&#x9F20;&#x6807;&#x653E;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x692D;&#x5706;&#x4E0A;&#x5C31;&#x663E;&#x793A;&#x989C;&#x8272;&#x3002;&#x4E0A;&#x56FE;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x53EB; /teleop_turtle &#x7684;&#x8282;&#x70B9;&#x548C;&#x4E00;&#x4E2A;&#x53EB; /turtlesim &#x7684;&#x8282;&#x70B9;&#xFF0C;&#x4ED6;&#x4EEC;topic&#x662F; /turtle1/cmd_vel&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4; /turtlesim &#x53EA;&#x63A5;&#x6536; /turtle1/cmd_vel &#x8FD9;&#x4E2A;topic&#x6307;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x3002;&#x600E;&#x6837;&#x770B;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x5462;&#xFF1F;</p>
+<h3 id="3-&#x67E5;&#x770B;rostopic&#x53CA;&#x5BF9;&#x5E94;message">3. &#x67E5;&#x770B;rostopic&#x53CA;&#x5BF9;&#x5E94;Message</h3>
+<p>&#x7262;&#x8BB0;Topics&#x4E0D;&#x662F;&#x5B9E;&#x4F53;&#xFF0C;Messages&#x662F;&#x5B9E;&#x4F53;&#xFF0C;Topics&#x548C;Messages&#x90FD;&#x6709;&#x7C7B;&#x578B;&#xFF0C;&#x4E00;&#x822C;Topics&#x548C;Messages&#x6709;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#xFF0C;&#x4F46;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x4E00;&#x5BF9;&#x4E00;&#xFF0C;&#x53EF;&#x80FD;&#x4E00;&#x5BF9;&#x591A;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x591A;&#x5BF9;&#x4E00;&#x3002;</p>
+<pre><code class="lang-bash">rostopic <span class="hljs-built_in">type</span> /turtle1/cmd_vel <span class="hljs-comment">#&#x67E5;&#x770B;&#x6D88;&#x606F;&#x7C7B;&#x578B;</span>
+
+rosmsg show geometry_msgs/Twist <span class="hljs-comment">#&#x67E5;&#x770B;&#x8BE5;&#x7C7B;&#x578B;&#x6D88;&#x606F;&#x5BF9;&#x5E94;&#x7684;&#x4FE1;&#x606F;</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x4F1A;&#x4F9D;&#x6B21;&#x770B;&#x5230;&#x8F93;&#x51FA;</p>
+<pre><code class="lang-bash">geometry_msgs/Twist
+
+geometry_msgs/Vector3 linear
+  <span class="hljs-built_in">float</span>64 x
+  <span class="hljs-built_in">float</span>64 y
+  <span class="hljs-built_in">float</span>64 z
+geometry_msgs/Vector3 angular
+  <span class="hljs-built_in">float</span>64 x
+  <span class="hljs-built_in">float</span>64 y
+  <span class="hljs-built_in">float</span>64 z
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x518D;&#x6765;&#x770B;&#x770B; /turtle1/cmd_vel &#x7684;&#x5B9E;&#x9645;&#x6570;&#x636E;&#x662F;&#x600E;&#x6837;&#x7684;&#xFF0C;&#x7528;</p>
+<pre><code class="lang-bash">rostopic <span class="hljs-built_in">echo</span> [/topic_name]
+</code></pre>
+<p>&#x663E;&#x793A; /teleop_turtle &#x548C; /turtlesim &#x4E4B;&#x95F4;&#x53D1;&#x5E03;&#x7684;Topic&#x5BF9;&#x5E94;&#x7684;Messages&#xFF08;&#x5B9E;&#x4F53;&#xFF09;&#x3002;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x65B0;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#xFF0C;&#x8F93;&#x5165;</p>
+<pre><code class="lang-bash">rostopic <span class="hljs-built_in">echo</span> /turtle1/cmd_vel
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x7EC8;&#x7AEF;&#x8FD8;&#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x8F93;&#x5165;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x53D1;&#x5E03;Messages&#xFF0C;&#x56DE;&#x5230;&#x7528;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x6D77;&#x9F9F;&#x52A8;&#x7684;&#x754C;&#x9762;&#xFF0C;&#x8BA9;&#x6D77;&#x9F9F;&#x52A8;&#x4E00;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x8F93;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x5185;&#x5BB9;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="../images/ros_turtle_echo_topic.png" alt=""></p>
+<h3 id="4-rostopic-pub">4. rostopic pub</h3>
+<p>&#x521A;&#x521A;&#x6211;&#x4EEC;&#x8981;&#x53D1;&#x5E03;&#xFF08;publish&#xFF09;&#x6D88;&#x606F;&#xFF0C;&#x7528;&#x7684;&#x662F;&#x901A;&#x8FC7;&#x5199;&#x597D;&#x7684;&#x6309;&#x952E;&#x63A7;&#x5236;&#x7A0B;&#x5E8F;&#xFF0C;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x8BA9;&#x63A7;&#x5236;&#x6D77;&#x9F9F;&#x52A8;&#xFF0C;&#x7136;&#x540E;&#x81EA;&#x52A8;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;&#x5176;&#x5B9E;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x63A7;&#x5236;&#x53F0;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-bash">rostopic pub [topic] [msg_<span class="hljs-built_in">type</span>] [args]
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x65B0;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#xFF0C;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre><code class="lang-bash">rostopic pub -2 /turtle1/cmd_vel geometry_msgs/Twist -- <span class="hljs-string">&apos;[2.0, 0.0, 0.0]&apos;</span> <span class="hljs-string">&apos;[0.0, 0.0, 1.8]&apos;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D; -1 &#x4EE3;&#x8868;&#x53D1;&#x5E03;1&#x6B21;&#xFF08;&#x53EF;&#x4EE5;&#x6539;&#x6210; -r 1&#xFF09;&#x4E00;&#x76F4;&#x53D1;&#x5E03;&#xFF08;-r &#x540E;&#x9762;&#x7684;1&#x4EE3;&#x8868;&#x53D1;&#x5E03;&#x9891;&#x7387;&#xFF09;&#xFF0C;&#x6D77;&#x9F9F;&#x5C31;&#x4E00;&#x76F4;&#x50BB;&#x50BB;&#x5730;&#x8F6C;&#x5708;&#x5708;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x53C2;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x6307;&#x5B9A;&#x3002;&#x4E4B;&#x540E;&#x6D77;&#x9F9F;&#x8FD0;&#x52A8;&#x5982;&#x56FE;&#xFF1A;</p>
+<p><img src="../images/ros_turtle_pub.png" alt=""></p>
+<h3 id="5-&#x603B;&#x7ED3;">5. &#x603B;&#x7ED3;</h3>
+<p>&#x672C;&#x8282;&#x7684;&#x6548;&#x679C;&#x5C31;&#x662F;&#x8BA9;&#x6D77;&#x9F9F;&#x8F6C;&#x5708;&#x5708;&#xFF0C;&#x4F9D;&#x6B21;&#x5728;&#x65B0;&#x6253;&#x5F00;&#x7684;&#x7EC8;&#x7AEF;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x89C1;&#x6548;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-bash">roscore
+rosrun turtlesim turtlesim_node
+rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- <span class="hljs-string">&apos;[2.0, 0.0, 0.0]&apos;</span> <span class="hljs-string">&apos;[0.0, 0.0, -1.8]&apos;</span>
+
+rosrun rqt_graph rqt_graph <span class="hljs-comment">#&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x89C6;&#x5316;Topics&#x6D41;&#x5411;</span>
+</code></pre>
+<p>&#x4E0B;&#x4E00;&#x8282;&#x4ECB;&#x7ECD; Services &#x901A;&#x4FE1;&#x65B9;&#x5F0F;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ros-nodes.html" class="navigation navigation-prev " aria-label="Previous page: 第一节 ROS Nodes">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ros-services.html" class="navigation navigation-next " aria-label="Next page: 第三节 ROS Services">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第二节 ROS Topics","level":"1.3.2","depth":2,"next":{"title":"第三节 ROS Services","level":"1.3.3","depth":2,"path":"chapter2/ros-services.md","ref":"chapter2/ros-services.md","articles":[]},"previous":{"title":"第一节 ROS Nodes","level":"1.3.1","depth":2,"path":"chapter2/ros-nodes.md","ref":"chapter2/ros-nodes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/ros-topics.md","mtime":"2019-08-21T06:41:51.691Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-23T05:21:08.730Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

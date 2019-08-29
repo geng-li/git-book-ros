@@ -1,0 +1,566 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第七节 ROS rossrv · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter3/" />
+    
+    
+    <link rel="prev" href="rosmsg.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    第一章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/install.html">
+            
+                <a href="../chapter1/install.html">
+            
+                    
+                    第一节 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/file-system.html">
+            
+                <a href="../chapter1/file-system.html">
+            
+                    
+                    第二节 常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/create-a-package.html">
+            
+                <a href="../chapter1/create-a-package.html">
+            
+                    
+                    第三节 创建package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/package_xml-cmake.html">
+            
+                <a href="../chapter1/package_xml-cmake.html">
+            
+                    
+                    第四节 package.xml和CMakeLists.txt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter1/build-ros-package.html">
+            
+                <a href="../chapter1/build-ros-package.html">
+            
+                    
+                    第五节 编译ROS Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="ros-nodes.html">
+            
+                <a href="ros-nodes.html">
+            
+                    
+                    第一节 ROS Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="ros-topics.html">
+            
+                <a href="ros-topics.html">
+            
+                    
+                    第二节 ROS Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="ros-services.html">
+            
+                <a href="ros-services.html">
+            
+                    
+                    第三节 ROS Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="ros-parameters.html">
+            
+                <a href="ros-parameters.html">
+            
+                    
+                    第四节 ROS Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="roslaunch.html">
+            
+                <a href="roslaunch.html">
+            
+                    
+                    第五节 ROS roslaunch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="rosmsg.html">
+            
+                <a href="rosmsg.html">
+            
+                    
+                    第六节 ROS rosmsg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="rossrv.html">
+            
+                <a href="rossrv.html">
+            
+                    
+                    第七节 ROS rossrv
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    第三章
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/cpp-topic.html">
+            
+                <a href="../chapter3/cpp-topic.html">
+            
+                    
+                    第一节 C++实现Topics通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/cpp-exec-topic.html">
+            
+                <a href="../chapter3/cpp-exec-topic.html">
+            
+                    
+                    第二节 运行Topics通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/cpp-service.html">
+            
+                <a href="../chapter3/cpp-service.html">
+            
+                    
+                    第三节 C++实现并运行Services通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/python-topic.html">
+            
+                <a href="../chapter3/python-topic.html">
+            
+                    
+                    第四节 Python实现Topics通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/python-service.html">
+            
+                <a href="../chapter3/python-service.html">
+            
+                    
+                    第五节 Python实现Services通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    第四章
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第七节 ROS rossrv</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x4E03;&#x8282;-ros-rossrv">&#x7B2C;&#x4E03;&#x8282; ROS rossrv</h1>
+<p>&#x672C;&#x8282;&#x4ECB;&#x7ECD; rossrv&#xFF0C;&#x5176;&#x5B9E;&#x548C;&#x4E0A;&#x4E00;&#x8282;&#x4ECB;&#x7ECD;&#x7684; rosmsg &#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;rossrv &#x662F;&#x7528;&#x5728; Services &#x901A;&#x4FE1;&#x65F6;&#x7684;&#xFF0C;&#x4E5F;&#x548C;&#x7ED3;&#x6784;&#x4F53;&#x6BD4;&#x8F83;&#x50CF;&#xFF0C;&#x4F46;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x3002;</p>
+<h3 id="1-&#x6837;&#x4F8B;">1. &#x6837;&#x4F8B;</h3>
+<pre><code class="lang-bash">int64 A
+int64 B
+---
+int64 Sum
+</code></pre>
+<p>A&#x3001;B&#x662F;&#x901A;&#x4FE1;&#x65F6;&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;&#xFF0C; Sum&#x662F;&#x8FD4;&#x56DE;&#x503C;&#x3002;&#x8BF7;&#x6C42;&#x548C;&#x8FD4;&#x56DE;&#x4E4B;&#x95F4;&#x7528;&#x201C;---&#x201D;&#x9694;&#x5F00;&#xFF0C;&#x591F;&#x7B80;&#x5355;&#x4E86;&#x3002;</p>
+<h3 id="2-&#x4F7F;&#x7528;-srv">2. &#x4F7F;&#x7528; srv</h3>
+<h4 id="21-&#x521B;&#x5EFA;---sumsrv">2.1 &#x521B;&#x5EFA;   Sum.srv</h4>
+<p>srv &#x81EA;&#x7136;&#x662F;&#x653E;&#x5728; package &#x4E0B;&#x7684; srv/ &#x6587;&#x4EF6;&#x5939;&#x91CC;&#x9762;&#x3002;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ~/catkin_ws/src/beginner_tutorials
+mkdir srv
+gedit srv/AddTwoInts.srv
+</code></pre>
+<p>&#x8FD9;&#x65F6;&#x4F1A;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x6837;&#x4F8B;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x590D;&#x5236;&#x5230;&#x91CC;&#x9762;&#xFF0C;&#x5173;&#x95ED;&#x6587;&#x4EF6;&#x5C31;&#x597D;&#x3002;</p>
+<h4 id="22-&#x4FEE;&#x6539;&#x6587;&#x4EF6;">2.2 &#x4FEE;&#x6539;&#x6587;&#x4EF6;</h4>
+<p>&#x5982;&#x679C;&#x8DDF;&#x7740;&#x4E0A;&#x4E00;&#x8282;&#x6765;&#xFF0C;&#x8FD9;&#x91CC;&#x4FEE;&#x6539;&#x5C31;&#x5F88;&#x7B80;&#x5355;&#xFF0C;package.xml &#x6587;&#x4EF6;&#x7167;&#x524D;&#x9762;&#x4E00;&#x8282;&#x505A;&#xFF0C;&#x5728;&#x6B64;&#x4E0D;&#x8D58;&#x8FF0;&#xFF0C;&#x9700;&#x8981;&#x4FEE;&#x6539; CmakeLists.txt &#x6587;&#x4EF6;&#x7684; add_service_files()&#xFF0C;&#x53D6;&#x6D88;&#x6CE8;&#x91CA;&#xFF08;&#x6216;&#x76F4;&#x63A5;&#x81EA;&#x5DF1;&#x91CD;&#x65B0;&#x5199;&#xFF09;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cmake">add_service_files(
+  FILES
+  AddTwoInts.srv
+)
+</code></pre>
+<h4 id="23-&#x663E;&#x793A;-srv">2.3 &#x663E;&#x793A; srv</h4>
+<p>&#x5728;&#x7EC8;&#x7AEF;&#x8FD0;&#x884C;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF0C;&#x663E;&#x793A;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash">rossrv show beginner_tutorials/AddTwoInts
+</code></pre>
+<p><img src="../images/ros_srv_sum.png" alt=""></p>
+<p>&#x62A5;&#x9519;&#x7684;&#x8BDD;&#x770B;&#x770B;&#x662F;&#x4E0D;&#x662F;&#x5728; ~/catkin_ws &#x6587;&#x4EF6;&#x5939;&#x53CA;&#x5176;&#x5B50;&#x6587;&#x4EF6;&#x4E0B;&#x3002;</p>
+<h3 id="3-&#x7F16;&#x8BD1;">3. &#x7F16;&#x8BD1;</h3>
+<p>&#x5176;&#x5B9E;&#x6211;&#x4EEC;&#x4E0D;&#x4FEE;&#x6539; package.xml &#x548C; CMakeLists.txt &#x6587;&#x4EF6;&#xFF0C;&#x4E0A;&#x9762;&#x5185;&#x5BB9;&#x8FD8;&#x662F;&#x80FD;&#x67E5;&#x770B;&#x7684;&#xFF0C;&#x56E0;&#x4E3A; ROS &#x4F1A;&#x81EA;&#x52A8;&#x5728; package &#x6240;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x5BFB;&#x627E; msg/&#xFF0C;srv/ &#x7B49;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x4F46;&#x8FD9;&#x4E9B;&#x5BF9;&#x6211;&#x4EEC;&#x540E;&#x9762;&#x7684;&#x7528; C++ &#x548C; Python &#x7F16;&#x7A0B;&#x7B49;&#x4E0D;&#x65B9;&#x4FBF;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7F16;&#x8BD1;&#x4EA7;&#x751F; msg &#x6216; srv &#x5BF9;&#x5E94;&#x7684; C++ &#x6587;&#x4EF6;&#x3002;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF08;&#x4FDD;&#x8BC1;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x8FD9;&#x91CC;&#x662F; catkin_ws/&#xFF09;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ~/catkin_ws/
+catkin_make
+</code></pre>
+<p>&#x6700;&#x7EC8;&#x6700;&#x540E;&#x51E0;&#x884C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../images/ros_cmake_msg_srv.png" alt=""></p>
+<p>&#x8981;&#x67E5;&#x770B;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5BF9;&#x4E8E;C++&#xFF0C;&#x5728; <em>~/catkin_ws/devel/include/beginner_tutorials/</em>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x5BF9;&#x4E8E; Python&#xFF0C;&#x5728;<em>~/catkin_ws/devel/lib/python2.7/dist-packages/beginner_tutorials/</em> &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="../images/ros_cmake_msg_srv_file.png" alt=""></p>
+<h3 id="4-&#x603B;&#x7ED3;">4. &#x603B;&#x7ED3;</h3>
+<p>&#x4EE5;&#x4E0A;&#x4FBF;&#x662F; srv &#x7684;&#x5185;&#x5BB9;&#x3002;&#x4ECE;&#x6B64;&#x8282;&#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x9047;&#x5230;&#x66F4;&#x591A;&#x9700;&#x8981;&#x7F16;&#x7A0B;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x591A;&#x601D;&#x8003;&#x603B;&#x7ED3;&#xFF0C;&#x65B9;&#x80FD;&#x8FD0;&#x7528;&#x81EA;&#x5982;&#x3002;&#x4E0B;&#x4E00;&#x8282;&#x5F00;&#x59CB;&#x8BB2;&#x89E3;&#x5982;&#x4F55;&#x7528; C++ &#x5199;&#x4E00;&#x4E2A; publisher &#x548C; &#x4E00;&#x4E2A; subscriber&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="rosmsg.html" class="navigation navigation-prev " aria-label="Previous page: 第六节 ROS rosmsg">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter3/" class="navigation navigation-next " aria-label="Next page: 第三章">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第七节 ROS rossrv","level":"1.3.7","depth":2,"next":{"title":"第三章","level":"1.4","depth":1,"path":"chapter3/README.md","ref":"chapter3/README.md","articles":[{"title":"第一节 C++实现Topics通信","level":"1.4.1","depth":2,"path":"chapter3/cpp-topic.md","ref":"chapter3/cpp-topic.md","articles":[]},{"title":"第二节 运行Topics通信","level":"1.4.2","depth":2,"path":"chapter3/cpp-exec-topic.md","ref":"chapter3/cpp-exec-topic.md","articles":[]},{"title":"第三节 C++实现并运行Services通信","level":"1.4.3","depth":2,"path":"chapter3/cpp-service.md","ref":"chapter3/cpp-service.md","articles":[]},{"title":"第四节 Python实现Topics通信","level":"1.4.4","depth":2,"path":"chapter3/python-topic.md","ref":"chapter3/python-topic.md","articles":[]},{"title":"第五节 Python实现Services通信","level":"1.4.5","depth":2,"path":"chapter3/python-service.md","ref":"chapter3/python-service.md","articles":[]}]},"previous":{"title":"第六节 ROS rosmsg","level":"1.3.6","depth":2,"path":"chapter2/rosmsg.md","ref":"chapter2/rosmsg.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/rossrv.md","mtime":"2019-08-22T09:37:26.918Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-23T05:21:08.730Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
